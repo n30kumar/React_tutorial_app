@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './component/Header';
@@ -25,6 +25,8 @@ useEffect(() => {
   return () => clearTimeout(timeout);
 }, []);
 
+// plese used the useContext concept
+const { user, setUser } = useContext(UserContext);
 
 
  const[ a, setA ] = React.useState(20);
